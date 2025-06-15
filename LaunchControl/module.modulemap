@@ -1,0 +1,12 @@
+//
+//  module.modulemap
+//  LaunchControl
+//
+//  Created by Nevio Hirani on 14.06.25.
+//
+
+module LaunchControl {
+    header "LaunchControl.h"
+
+    export *
+}

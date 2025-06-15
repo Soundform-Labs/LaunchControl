@@ -1,5 +1,5 @@
 //
-//  LaunchControl.h
+//  LCLoggingStream.swift
 //  LaunchControl
 //
 //  Copyright (c) 2025 - Soundform Labs. All rights reserved.
@@ -17,15 +17,14 @@
 //  limitations under the License.
 //
 
-#import <Foundation/Foundation.h>
+import Foundation
 
-//! Project version number for LaunchControl.
-FOUNDATION_EXPORT double LaunchControlVersionNumber;
-
-//! Project version string for LaunchControl.
-FOUNDATION_EXPORT const unsigned char LaunchControlVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <LaunchControl/PublicHeader.h>
-
-#import <LaunchControl/LCMIDILogger.h>
-#import <LaunchControl/LCMIDIDeviceManager.h>
+internal func log(
+    _ level: LCMIDILogLevel,
+    _ message: String,
+    file: String = #file,
+    line: Int = #line,
+    function: String = #function
+) {
+    LCMIDIWriteLog(level, file, Int32(line), function, message as String)
+}
