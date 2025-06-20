@@ -25,7 +25,7 @@ Designed with both developers and performers in mind, LaunchControl includes:
 
 LaunchControl abstracts the complexities of CoreMIDI, helping you focus on your app's creative functionality.
 
-### Sample Applications
+### Dive into featured sample apps
 
 Explore how LaunchControl integrates into real-world scenarios with sample apps that demonstrate device interaction, grid control, velocity input handling, and visual feedback.
 
