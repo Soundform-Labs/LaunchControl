@@ -6,6 +6,12 @@ executors:
   macos-executor:
     macos:
       xcode: "26.0.0"
+    resource_class: macos.m1.medium
+  
+  macos-xcode-16:
+    macos:
+      xcode: "16.4.0"
+    resource_class: macos.m1.medium
 
 jobs:
   build-xcframework:
@@ -86,7 +92,7 @@ jobs:
           destination: test-iPadOS.log
 
   build-docc:
-    executor: macos-executor
+    executor: macos-xcode-16
     steps:
       - checkout
       - run:
