@@ -133,8 +133,8 @@ workflows:
             - build-xcframework
   
   build-and-deploy-docc:
-    triggers:
-      - type: "github"
-        branch: "main"
     jobs:
-      - build-docc
+      - build-docc:
+          filters:
+            branches:
+              only: main
