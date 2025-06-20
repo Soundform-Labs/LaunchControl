@@ -39,7 +39,6 @@ jobs:
             -destination 'generic/platform=macOS' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO;
           $(xcrun --find docc) process-archive \
             transform-for-static-hosting /tmp/docbuild/Build/Products/Debug/LaunchControl.doccarchive \
-            --experimental-enable-custom-templates \
             --hosting-base-path LaunchControl \
             --output-path docs;
           echo "<script>window.location.href += \"/documentation/launchcontrol\"</script>" > docs/index.html;
